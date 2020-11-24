@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootcamp Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="search">
+        <input type="text" id="ingredient-input" placeholder="Ingredient" />
+        <button onclick=searchRecipe()>Search!</button>
+    </div>
+
+
+    <div id="recipes"></div>
+   
+
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each data}}
+          <div class="recipe">
+              <div>
+              <a href="{{href}}">{{title}}</a>
+            </div>
+              <div class="recipe-image">
+                  <img src="{{thumbnail}}" alt="" id="recipe-picture">
+              </div>
+              <h4>Ingrdients</h4>
+              <div>
+              <ul class="ingredients">
+                {{#each ingredients}}
+                  <li>
+                      {{this}}
+                  </li>
+                {{/each}}
+            </ul>
+        </div>
+          </div>
+           
+        {{/each}}
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

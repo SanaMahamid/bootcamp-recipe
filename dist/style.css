@@ -1,0 +1,33 @@
+body{
+    background-color: grey;
+}
+
+#recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1vmax;
+}
+
+#recipe-picture {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    vertical-align: middle;
+    justify-self: center;
+    border-radius: 10%;
+}
+
+.recipe{
+    background-color: #ffc048;
+    border-radius: 5%;
+    padding: 1vmax;
+    box-shadow: 1px 1px 3px black;
+    border-bottom-right-radius: 4px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
